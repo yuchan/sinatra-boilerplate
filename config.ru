@@ -1,9 +1,7 @@
-require "sinatra"
 require "./app"
 
 configure :development do
-  require "rack-livereload"
-  use Rack::LiveReload
+  register Sinatra::Reloader
 end
 
 map '/assets' do

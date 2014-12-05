@@ -16,3 +16,13 @@ Enjoy hacking!
 
 My previous boilerplate experience is [here](https://github.com/yuchan/coffee-boilerplate).
 
+heroku deployment
+-----------------
+
+### prepare
+
+    heroku config:add BUILDPACK_URL=https://github.com/heroku/heroku-buildpack-multi.git
+
+### go!
+
+    git push heroku master
