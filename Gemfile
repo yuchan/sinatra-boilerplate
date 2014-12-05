@@ -17,5 +17,6 @@ gem 'sprockets-sass'
 gem 'unicorn'
 
 group :test, :development do
+  gem 'rake'
   gem 'shotgun'
 end
