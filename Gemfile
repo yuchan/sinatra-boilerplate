@@ -14,6 +14,8 @@ gem 'sprockets'
 gem 'sprockets-helpers'
 gem 'sprockets-sass'
 
+gem 'unicorn'
+
 group :test, :development do
   gem 'shotgun'
 end

@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+- 2.1.5
+deploy:
+  provider: heroku
+  api_key:
+    secure: cHioI6HfZgP5JZxcOnMkr8f2t6pmnT0yIhcXy1H1qQqMmmWYeSzDVcHCAEHtc+9qMe5JKuRcjayYbTf6rNgxOvDSWQa+El7jkDEnhfQORkbsuGOjea4P2u0wl/En7vJ0aekelwPOxRQzp5ny1HTh/TX0LON7/miMVniJV1wB+YU=
+  app: arcane-dawn-1089
+  on:
+    repo: yuchan/sinatra-boilerplate
