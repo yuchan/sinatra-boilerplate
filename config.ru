@@ -14,6 +14,9 @@ map '/assets' do
   App.sprockets.append_path File.join(App.root, "assets", "images")
   App.sprockets.append_path File.join(App.root, "bower_components")
 
+  App.sprockets.js_compressor  = :uglify
+  App.sprockets.css_compressor = :scss
+
   Sprockets::Helpers.configure do |config|
     config.environment = App.sprockets
     config.prefix      = '/assets'
