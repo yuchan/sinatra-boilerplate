@@ -23,3 +23,7 @@ group :test, :development do
   gem 'rake'
   gem 'shotgun'
 end
+
+group :production do
+  gem 'pg'
+end
