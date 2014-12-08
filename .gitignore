@@ -4,3 +4,4 @@ bower_components
 .bundle
 .ruby-version
 node_modules
+db/*.sqlite3

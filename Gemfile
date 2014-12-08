@@ -3,6 +3,7 @@ source "https://rubygems.org"
 
 gem 'sinatra'
 gem 'sinatra-contrib'
+gem 'sinatra-activerecord'
 
 gem 'bootstrap-sass'
 gem 'coffee-script'
@@ -17,6 +18,7 @@ gem 'sprockets-sass'
 gem 'unicorn'
 
 group :test, :development do
+  gem 'sqlite3'
   gem 'minitest'
   gem 'rake'
   gem 'shotgun'
