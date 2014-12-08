@@ -1,4 +1,4 @@
-GEM
+G EM
   remote: https://rubygems.org/
   specs:
     activemodel (4.1.8)
@@ -32,6 +32,7 @@ GEM
     kgio (2.9.2)
     minitest (5.4.3)
     multi_json (1.10.1)
+    pg (0.17.1)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
@@ -87,6 +88,7 @@ DEPENDENCIES
   coffee-script
   haml
   minitest
+  pg
   rake
   sass
   shotgun
