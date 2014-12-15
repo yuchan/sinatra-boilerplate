@@ -1,9 +1,13 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
+# base framework
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'sinatra-activerecord'
+
+# api
+gem 'grape'
 
 gem 'bootstrap-sass'
 gem 'coffee-script'
@@ -22,6 +26,7 @@ group :test, :development do
   gem 'minitest'
   gem 'rake'
   gem 'shotgun'
+  gem 'tux'
 end
 
 group :production do

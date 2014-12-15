@@ -1,8 +1,17 @@
 require "./app"
 
-configure :development do
+enable :sessions
+
+configure :development, :test do
   register Sinatra::Reloader
+  set :session_secret, '*&(^B234'
 end
+
+configure :production do
+  set :session_secret, ENV['SECRET_KEY']
+  ActiveRecord::Base.logger.level = 1
+end
+
 
 map '/assets' do
   public_folder = File.join(App.root, '/public')
@@ -12,9 +21,11 @@ map '/assets' do
   App.sprockets.append_path File.join(App.root, "assets", "images")
   App.sprockets.append_path File.join(App.root, "bower_components")
 
-  App.sprockets.js_compressor  = :uglify
-  App.sprockets.css_compressor = :scss
-
+  configure :production do
+    App.sprockets.js_compressor  = :uglify
+    App.sprockets.css_compressor = :scss
+  end
+  
   Sprockets::Helpers.configure do |config|
     config.environment = App.sprockets
     config.prefix      = '/assets'
@@ -24,6 +35,4 @@ map '/assets' do
   run App.sprockets
 end
 
-map "/" do
-  run App
-end
+run Rack::Cascade.new [Api, App]
